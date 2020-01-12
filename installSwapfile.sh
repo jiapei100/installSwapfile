@@ -7,7 +7,7 @@ set -e
 SWAPDIRECTORY="/mnt"
 # Ubuntu recommends 6GB for 4GB of memory when using suspend
 # You can use 1 or 2 if need be
-SWAPSIZE=6
+SWAPSIZE=8
 AUTOMOUNT="Y"
 function usage
 {
@@ -23,7 +23,7 @@ while [ "$1" != "" ]; do
         -d | --dir )            shift
                                 SWAPDIRECTORY=$1
                                 ;;
-        -s | --size )           shift 
+        -s | --size )           shift
 				SWAPSIZE=$1
                                 ;;
         -a | --auto )           shift
